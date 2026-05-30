@@ -1,4 +1,4 @@
-# Aura: Futuristic 3D timed MCQ Quiz & Assessment Platform
+MCQ Quiz & Assessment Platform
 
 A premium, highly interactive, and secure timed quiz and assessment platform modeled after Vercel, Stripe, and Linear design aesthetics. Built under a modern monorepo architecture with React 19, Tailwind CSS, and Node.js.
 
@@ -23,10 +23,10 @@ graph TD
 *   **BulkBypass Loader**: Custom CSV and JSON parser enabling admins to import entire MCQ banks instantaneously.
 *   **Telemetry Analytics Engine**: Compiles aggregate metrics, stacked percentage-based performance distributions, and global leaderboard rankings.
 
-### 2. Premium 3D SaaS Frontend (`/frontend`)
+### 2. Frontend (`/frontend`)
 *   **CSS Design System**: Engineered with customizable HSL variables, deep space-dark slate gradients, and glassmorphic panel boards.
 *   **Lightweight Canvas Particle Field**: Avoids heavy WebGL libraries using a custom Canvas particles network that renders a floating mesh background at a buttery-smooth 60fps.
-*   **Aurora Onboarding Gateway**: A stunning full-screen, two-column sign-in/up screen. Features an unmasked, high-definition background ambient loop, staggered slide-up entry animations using `framer-motion`, and a dynamic, clickable FAQ accordion panel that reveals timer and scorecard explanations on demand.
+*   **Onboarding Gateway**: A stunning full-screen, two-column sign-in/up screen. Features an unmasked, high-definition background ambient loop, staggered slide-up entry animations using `framer-motion`, and a dynamic, clickable FAQ accordion panel that reveals timer and scorecard explanations on demand.
 *   **Interactive Live MCQ Sandbox**: Spawns a 3-question MCQ Sandbox Player directly on the guest landing dashboard, allowing visitors to test knowledge and view instant negative marking point grading without needing credentials!
 *   **Anti-Cheat Timed Engine**: A state-preserving countdown player that caches chosen answers in background storage. Closing the tab or refreshing the page **will not stop the clock** — preventing local client-side clock tampering!
 *   **Scorecard Review Portal**: Post-submission or via the dashboard Completed Attempts table, users can inspect color-coded question cards highlighting correct options (**emerald green**), student choices (**rose red**), and skipped items.
@@ -82,11 +82,11 @@ npm run dev
 
 ## Detailed Verification & Test Flows
 
-### 0. Public Landing Dashboard & Aurora Onboarding
+### 0. Public Landing Dashboard &  Onboarding
 1.  Open `http://localhost:5173/` in an incognito window.
 2.  Answer the **Hero MCQ Sandbox** questions. Click **Compute Grade** to verify instant points calculation with simulated negative markings.
 3.  Click **Launch Panel** on any public category.
-4.  Observe the full-screen two-column **Aurora Sign Up / Sign In** page. Hover over Google/GitHub triggers, click the expandable platform questions in the left column, and test the secure **Password Toggle-Eye** button.
+4.  Observe the full-screen two-column **Sign Up / Sign In** page. Hover over Google/GitHub triggers, click the expandable platform questions in the left column, and test the secure **Password Toggle-Eye** button.
 5.  Click **Back to Dashboard** to return cleanly.
 
 ### 1. Timed Student MCQ Assessment & Anti-Cheat
