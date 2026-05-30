@@ -1,4 +1,4 @@
-MCQ Quiz & Assessment Platform
+# MCQ Quiz & Assessment Platform
 
 A premium, highly interactive, and secure timed quiz and assessment platform modeled after Vercel, Stripe, and Linear design aesthetics. Built under a modern monorepo architecture with React 19, Tailwind CSS, and Node.js.
 
