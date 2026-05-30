@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { 
-  Award, Clock, HelpCircle, ShieldAlert, Sparkles, 
-  Play, ArrowRight, Lock, CheckCircle2, Zap, 
+import {
+  Award, Clock, HelpCircle, ShieldAlert, Sparkles,
+  Play, ArrowRight, Lock, CheckCircle2, Zap,
   Users, BarChart2, Check, X, ShieldCheck
 } from 'lucide-react';
 
@@ -134,7 +134,7 @@ export default function PreLoginDashboard({ onAuthClick }) {
 
   return (
     <div className="w-full relative min-h-screen text-slate-100 overflow-x-hidden">
-      
+
       {/* Immersive background decoration */}
       <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none z-0" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none z-0" />
@@ -155,13 +155,13 @@ export default function PreLoginDashboard({ onAuthClick }) {
           </div>
 
           <div className="flex items-center gap-4">
-            <button 
+            <button
               onClick={() => triggerAuthOpen(true)}
               className="text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition-all px-4 py-2"
             >
               Sign In
             </button>
-            <button 
+            <button
               onClick={() => triggerAuthOpen(false)}
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg shadow-purple-500/20 transform hover:-translate-y-0.5"
             >
@@ -173,21 +173,21 @@ export default function PreLoginDashboard({ onAuthClick }) {
 
       {/* Main Page Layout */}
       <div className="max-w-7xl mx-auto px-6 py-12 relative z-10 space-y-20">
-        
+
         {/* HERO SECTION split with Sandbox player */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column Text details */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1 text-xs text-purple-300 font-display">
               <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
               <span>Futuristic Timed MCQ Analytics Platform</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white">
-              The Graded Assessment Panel <br />
+              Online Quiz and<br />
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Crafted for 60fps Experience.
+                Assessment Platform
               </span>
             </h1>
 
@@ -196,7 +196,7 @@ export default function PreLoginDashboard({ onAuthClick }) {
             </p>
 
             <div className="flex gap-4 pt-2 font-display">
-              <button 
+              <button
                 onClick={() => triggerAuthOpen(false)}
                 className="inline-flex items-center gap-2 bg-white/4 hover:bg-white/8 border border-white/10 text-white px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5"
               >
@@ -209,7 +209,7 @@ export default function PreLoginDashboard({ onAuthClick }) {
           <div className="lg:col-span-5 relative">
             <div className="absolute inset-0 bg-cyan-500/10 rounded-3xl blur-2xl pointer-events-none" />
             <div className="glass-panel border border-white/10 rounded-3xl p-6 relative overflow-hidden flex flex-col min-h-[380px] shadow-2xl">
-              
+
               {/* Card headers */}
               <div className="flex justify-between items-center border-b border-white/5 pb-4 mb-4">
                 <div className="flex items-center gap-2">
@@ -244,15 +244,13 @@ export default function PreLoginDashboard({ onAuthClick }) {
                           <button
                             key={oIdx}
                             onClick={() => handleSandboxOptionSelect(oIdx)}
-                            className={`w-full text-left p-3.5 text-xs rounded-xl border transition-all duration-300 flex items-center gap-3 ${
-                              isSelected 
-                                ? 'bg-purple-500/15 border-purple-500/40 text-white' 
+                            className={`w-full text-left p-3.5 text-xs rounded-xl border transition-all duration-300 flex items-center gap-3 ${isSelected
+                                ? 'bg-purple-500/15 border-purple-500/40 text-white'
                                 : 'bg-white/2 border-white/5 hover:bg-white/4 text-slate-300'
-                            }`}
+                              }`}
                           >
-                            <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${
-                              isSelected ? 'bg-purple-500 text-white' : 'border border-slate-600 text-slate-400'
-                            }`}>
+                            <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${isSelected ? 'bg-purple-500 text-white' : 'border border-slate-600 text-slate-400'
+                              }`}>
                               {String.fromCharCode(65 + oIdx)}
                             </div>
                             <span className="flex-1">{opt}</span>
@@ -278,7 +276,7 @@ export default function PreLoginDashboard({ onAuthClick }) {
                       <ShieldCheck className="w-8 h-8 text-emerald-400" />
                     </div>
                     <h3 className="text-xl font-bold tracking-tight text-white">Grading Complete!</h3>
-                    
+
                     <div className="bg-white/2 border border-white/5 rounded-2xl py-4 px-8 w-full relative overflow-hidden">
                       <p className="text-[9px] font-bold text-slate-500 uppercase tracking-widest font-display">Sandbox Final Score</p>
                       <h2 className="text-3xl font-black text-white">{sandboxScore} / 12 pts</h2>
@@ -349,7 +347,7 @@ export default function PreLoginDashboard({ onAuthClick }) {
 
         {/* Public Quizzes Preview and Leaderboard Podium split */}
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          
+
           {/* Left: 2 Columns of Quizzes */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex justify-between items-center">
@@ -361,8 +359,8 @@ export default function PreLoginDashboard({ onAuthClick }) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {publicQuizzes.map(quiz => (
-                <div 
-                  key={quiz.id} 
+                <div
+                  key={quiz.id}
                   className="glass-panel border border-white/10 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between group hover:border-white/15 transition-all duration-300"
                 >
                   <div className="space-y-4">
@@ -415,14 +413,13 @@ export default function PreLoginDashboard({ onAuthClick }) {
 
             <div className="space-y-3">
               {publicLeaderboard.map((student, idx) => (
-                <div 
-                  key={student.username} 
+                <div
+                  key={student.username}
                   className="flex justify-between items-center px-4 py-3 rounded-xl border border-white/5 bg-white/2 hover:bg-white/4 transition-all duration-300"
                 >
                   <div className="flex items-center gap-3">
-                    <span className={`text-xs font-black w-6 text-center ${
-                      idx === 0 ? 'text-amber-400' : idx === 1 ? 'text-slate-300' : 'text-amber-700'
-                    }`}>
+                    <span className={`text-xs font-black w-6 text-center ${idx === 0 ? 'text-amber-400' : idx === 1 ? 'text-slate-300' : 'text-amber-700'
+                      }`}>
                       #{idx + 1}
                     </span>
                     <div className="w-7 h-7 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 font-extrabold text-[9px] flex items-center justify-center font-display">

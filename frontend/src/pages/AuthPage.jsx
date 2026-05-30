@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
-import { 
-  Circle, Eye, EyeOff, 
-  ArrowLeft, ShieldAlert, CheckCircle2 
+import {
+  Circle, Eye, EyeOff,
+  ArrowLeft, ShieldAlert, CheckCircle2
 } from 'lucide-react';
 
 const Chrome = (props) => (
@@ -47,11 +47,11 @@ const Github = (props) => (
 
 export default function AuthPage({ onBackToDashboard }) {
   const [isLogin, setIsLogin] = useState(true);
-  
+
   // Custom First Name and Last Name fields mapping to username
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  
+
   const [usernameOrEmail, setUsernameOrEmail] = useState(''); // For login
   const [email, setEmail] = useState(''); // For signup
   const [password, setPassword] = useState('');
@@ -118,26 +118,26 @@ export default function AuthPage({ onBackToDashboard }) {
 
   return (
     <main className="flex min-h-screen w-full bg-black selection:bg-white/30 p-2 transition-all duration-500 lg:h-screen lg:overflow-hidden lg:p-4 text-white">
-      
+
       {/* 1. LEFT COLUMN (HERO & BACKGROUND VIDEO) */}
       <section className="relative w-[52%] hidden lg:flex flex-col items-center justify-end pb-32 px-12 rounded-3xl overflow-hidden shadow-2xl h-full">
-        
+
         {/* Absolutely positioned source video */}
-        <video 
-          className="absolute inset-0 w-full h-full object-cover" 
-          autoPlay 
-          muted 
-          loop 
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
           playsInline
         >
-          <source 
-            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_081238_406ed0e3-5d83-436e-a512-0bbff7ec5b95.mp4" 
-            type="video/mp4" 
+          <source
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_081238_406ed0e3-5d83-436e-a512-0bbff7ec5b95.mp4"
+            type="video/mp4"
           />
         </video>
 
         {/* Hero Content Overlay (Staggered Animation) */}
-        <motion.div 
+        <motion.div
           className="z-10 w-full max-w-xs space-y-8"
           variants={containerVariants}
           initial="hidden"
@@ -146,13 +146,13 @@ export default function AuthPage({ onBackToDashboard }) {
           {/* Brand/Logo */}
           <motion.div variants={itemVariants} className="flex items-center gap-3">
             <Circle className="w-5 h-5 fill-white text-white" />
-            <span className="text-xl font-semibold tracking-tight">Aurora</span>
+            <span className="text-xl font-semibold tracking-tight">Queries</span>
           </motion.div>
 
           {/* Heading Block */}
           <motion.div variants={itemVariants} className="space-y-2">
             <h2 className="text-4xl font-medium tracking-tight whitespace-nowrap">
-              {isLogin ? 'Welcome back' : 'Join Aurora'}
+              {isLogin ? 'Welcome back' : 'Signup'}
             </h2>
             <p className="text-white/60 text-xs leading-relaxed">
               Click any question below to explore our platform features.
@@ -162,16 +162,16 @@ export default function AuthPage({ onBackToDashboard }) {
           {/* Related interactive questions rendering */}
           <motion.div variants={itemVariants} className="space-y-4">
             <div className="space-y-2">
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={() => setActiveQuestion(1)}
                 className="w-full text-left focus:outline-none block"
               >
                 <StepItem number={1} text="How are timers secured?" active={activeQuestion === 1} />
               </button>
               {activeQuestion === 1 && (
-                <motion.p 
-                  initial={{ opacity: 0, y: -5 }} 
+                <motion.p
+                  initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                   className="text-white/50 text-[11px] leading-relaxed pl-5 pr-2 pt-1 font-display"
@@ -182,16 +182,16 @@ export default function AuthPage({ onBackToDashboard }) {
             </div>
 
             <div className="space-y-2">
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={() => setActiveQuestion(2)}
                 className="w-full text-left focus:outline-none block"
               >
                 <StepItem number={2} text="Is negative marking supported?" active={activeQuestion === 2} />
               </button>
               {activeQuestion === 2 && (
-                <motion.p 
-                  initial={{ opacity: 0, y: -5 }} 
+                <motion.p
+                  initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                   className="text-white/50 text-[11px] leading-relaxed pl-5 pr-2 pt-1 font-display"
@@ -202,16 +202,16 @@ export default function AuthPage({ onBackToDashboard }) {
             </div>
 
             <div className="space-y-2">
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={() => setActiveQuestion(3)}
                 className="w-full text-left focus:outline-none block"
               >
                 <StepItem number={3} text="Can I inspect detailed scorecards?" active={activeQuestion === 3} />
               </button>
               {activeQuestion === 3 && (
-                <motion.p 
-                  initial={{ opacity: 0, y: -5 }} 
+                <motion.p
+                  initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                   className="text-white/50 text-[11px] leading-relaxed pl-5 pr-2 pt-1 font-display"
@@ -226,10 +226,10 @@ export default function AuthPage({ onBackToDashboard }) {
 
       {/* 2. RIGHT COLUMN (FORM & GUEST LOGINS) */}
       <section className="flex-1 flex flex-col items-center justify-center py-12 lg:py-6 px-4 sm:px-12 lg:px-16 xl:px-24 overflow-y-auto lg:overflow-hidden relative">
-        
+
         {/* escape to Guest dashboard button */}
         {onBackToDashboard && (
-          <button 
+          <button
             onClick={onBackToDashboard}
             className="absolute top-8 left-8 text-xs font-semibold text-white/40 hover:text-white flex items-center gap-2 group transition-colors"
           >
@@ -239,7 +239,7 @@ export default function AuthPage({ onBackToDashboard }) {
         )}
 
         {/* Form Container (Fade-in reveal) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -251,8 +251,8 @@ export default function AuthPage({ onBackToDashboard }) {
               {isLogin ? 'Sign In to Profile' : 'Create New Profile'}
             </h3>
             <p className="text-white/40 text-sm">
-              {isLogin 
-                ? 'Input your login parameters to synchronize.' 
+              {isLogin
+                ? 'Input your login parameters to synchronize.'
                 : 'Input your basic details to begin the journey.'
               }
             </p>
@@ -269,30 +269,30 @@ export default function AuthPage({ onBackToDashboard }) {
 
           {/* Dynamic input form */}
           <form onSubmit={handleSubmit} className="space-y-4 text-left">
-            
+
             {!isLogin ? (
               <>
                 {/* 2-column First & Last name grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <InputGroup 
-                    label="First Name" 
-                    placeholder="Enter first name" 
+                  <InputGroup
+                    label="First Name"
+                    placeholder="Enter first name"
                     value={firstName}
                     onChange={e => setFirstName(e.target.value)}
                     id="firstName"
                   />
-                  <InputGroup 
-                    label="Last Name" 
-                    placeholder="Enter last name" 
+                  <InputGroup
+                    label="Last Name"
+                    placeholder="Enter last name"
                     value={lastName}
                     onChange={e => setLastName(e.target.value)}
                     id="lastName"
                   />
                 </div>
 
-                <InputGroup 
-                  label="Email Address" 
-                  placeholder="name@example.com" 
+                <InputGroup
+                  label="Email Address"
+                  placeholder="name@example.com"
                   type="email"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
@@ -319,9 +319,9 @@ export default function AuthPage({ onBackToDashboard }) {
               </>
             ) : (
               // Login inputs
-              <InputGroup 
-                label="Email or Username" 
-                placeholder="Enter email or username" 
+              <InputGroup
+                label="Email or Username"
+                placeholder="Enter email or username"
                 value={usernameOrEmail}
                 onChange={e => setUsernameOrEmail(e.target.value)}
                 id="usernameOrEmail"
@@ -329,16 +329,16 @@ export default function AuthPage({ onBackToDashboard }) {
             )}
 
             {/* Password input with toggle-eye button */}
-            <InputGroup 
-              label="Password" 
-              placeholder="••••••••" 
+            <InputGroup
+              label="Password"
+              placeholder="••••••••"
               type={showPassword ? 'text' : 'password'}
               value={password}
               onChange={e => setPassword(e.target.value)}
               id="password"
             >
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-4 text-white/40 hover:text-white transition-colors"
               >
@@ -365,7 +365,7 @@ export default function AuthPage({ onBackToDashboard }) {
 
           {/* Footer toggle switcher link */}
           <div className="text-center pt-2">
-            <button 
+            <button
               onClick={() => { setIsLogin(!isLogin); setError(''); }}
               className="text-xs text-white/40 hover:text-white font-semibold transition-colors"
             >
@@ -385,14 +385,12 @@ export default function AuthPage({ onBackToDashboard }) {
 
 function StepItem({ number, text, active }) {
   return (
-    <div className={`flex items-center gap-4 px-5 py-4 rounded-2xl w-full max-w-xs transition-all duration-300 ${
-      active 
-        ? 'bg-white text-black border border-white shadow-lg' 
-        : 'bg-brand-gray text-white border-none'
-    }`}>
-      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold font-display flex-shrink-0 ${
-        active ? 'bg-black text-white' : 'bg-white/10 text-white/40'
+    <div className={`flex items-center gap-4 px-5 py-4 rounded-2xl w-full max-w-xs transition-all duration-300 ${active
+      ? 'bg-white text-black border border-white shadow-lg'
+      : 'bg-brand-gray text-white border-none'
       }`}>
+      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold font-display flex-shrink-0 ${active ? 'bg-black text-white' : 'bg-white/10 text-white/40'
+        }`}>
         {number}
       </div>
       <span className="text-xs font-semibold tracking-wide uppercase font-display select-none">
@@ -404,7 +402,7 @@ function StepItem({ number, text, active }) {
 
 function SocialButton({ icon: Icon, label }) {
   return (
-    <button 
+    <button
       type="button"
       className="flex-1 flex items-center justify-center gap-3 bg-black border border-white/10 rounded-xl hover:bg-white/5 h-12 transition-all duration-300 font-display text-xs font-semibold uppercase tracking-wider text-white hover:border-white/20 active:scale-[0.98]"
     >

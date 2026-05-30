@@ -320,7 +320,7 @@ export default function AdminDashboard() {
           <div className="flex-1 min-w-[240px]">
             <input 
               type="text"
-              className="w-full bg-white/3 border border-white/8 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
+              className="w-full bg-slate-900 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
               placeholder="Search by Student Username..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
@@ -444,7 +444,7 @@ export default function AdminDashboard() {
                 <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Quiz Title</label>
                 <input
                   type="text"
-                  className="w-full bg-white/3 border border-white/8 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
+                  className="w-full bg-slate-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
                   placeholder="e.g. JavaScript ES6 Core Concepts"
                   required
                   value={title}
@@ -455,7 +455,7 @@ export default function AdminDashboard() {
               <div>
                 <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Description</label>
                 <textarea
-                  className="w-full bg-white/3 border border-white/8 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm h-20 resize-none"
+                  className="w-full bg-slate-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm h-20 resize-none"
                   placeholder="Provide scope details for students..."
                   value={description}
                   onChange={e => setDescription(e.target.value)}
@@ -468,7 +468,7 @@ export default function AdminDashboard() {
                   <input
                     type="number"
                     min="1"
-                    className="w-full bg-white/3 border border-white/8 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
+                    className="w-full bg-slate-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
                     required
                     value={timeLimit}
                     onChange={e => setTimeLimit(Number(e.target.value))}
@@ -480,7 +480,7 @@ export default function AdminDashboard() {
                     type="number"
                     min="0"
                     step="0.1"
-                    className="w-full bg-white/3 border border-white/8 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
+                    className="w-full bg-slate-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-sm"
                     required
                     value={negativeMarking}
                     onChange={e => setNegativeMarking(Number(e.target.value))}
@@ -633,7 +633,7 @@ export default function AdminDashboard() {
                   <div>
                     <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Raw Questions JSON List</label>
                     <textarea
-                      className="w-full bg-white/3 border border-white/8 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-xs font-mono h-40 resize-none leading-relaxed"
+                      className="w-full bg-slate-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/35 transition-all text-xs font-mono h-40 resize-none leading-relaxed"
                       placeholder={sampleJSONTemplate}
                       value={pastedJSON}
                       onChange={e => setPastedJSON(e.target.value)}
