@@ -1,0 +1,4 @@
+questionText,option1,option2,option3,option4,correctAnswerIndex,points
+What type of database is MongoDB?,Key-Value Store,Document-Oriented Database,Relational Database,Graph Database,1,1
+Which command is used to insert a document in MongoDB?,db.collection.insertOne(),db.collection.insert(),db.collection.add(),db.collection.create(),0,1
+In MongoDB what does primary key id default to?,UUID,Auto-increment Integer,BSON ObjectId,Random String,2,1

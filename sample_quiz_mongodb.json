@@ -1,0 +1,35 @@
+[
+  {
+    "questionText": "What type of database is MongoDB?",
+    "options": [
+      "Key-Value Store",
+      "Document-Oriented Database",
+      "Relational Database",
+      "Graph Database"
+    ],
+    "correctAnswer": 1,
+    "points": 1
+  },
+  {
+    "questionText": "Which command is used to insert a single document in MongoDB?",
+    "options": [
+      "db.collection.insertOne()",
+      "db.collection.insert()",
+      "db.collection.add()",
+      "db.collection.create()"
+    ],
+    "correctAnswer": 0,
+    "points": 1
+  },
+  {
+    "questionText": "In MongoDB, what does the primary key field _id default to if not specified?",
+    "options": [
+      "Universally Unique Identifier (UUID)",
+      "Auto-incrementing Integer",
+      "BSON ObjectId",
+      "Random 16-character String"
+    ],
+    "correctAnswer": 2,
+    "points": 1
+  }
+]
